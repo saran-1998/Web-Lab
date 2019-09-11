@@ -1,0 +1,16 @@
+<!ELEMENT hospital (patient)>
+<!ELEMENT patient (name,sex,room-number,age,social-security-number,primary-insurance-company,secondary-insurance-company)>
+<!ELEMENT name (#PCDATA)>
+<!ATTLIST firstname #REQUIRED>
+<!ATTLIST middlename >
+<!ATTLIST lastname #REQUIRED>
+<!ELEMENT age(#PCDATA) #REQUIRED>
+<!ELEMENT sex(#PCDATA) #REQUIRED>
+<!ELEMENT room-number (#PCDATA) #REQUIRED>
+<!ELEMENT social-security-number(#PCDATA) #REQUIRED>
+<!ELEMENT primary-insurance-company (id,group-id,phone,address) #REQUIRED>
+<!ELEMENT  id (#PCDATA>
+<!ELEMENT  group-id (#PCDATA>
+<!ELEMENT  phone (#PCDATA>
+<!ELEMENT  address (#PCDATA>
+<!ELEMENT secondary-insurance-company (id,group-id,phone,address)>

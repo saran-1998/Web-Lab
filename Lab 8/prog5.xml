@@ -1,0 +1,42 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<?xml-stylesheet type="text/xsl" href="prog5.xsl" ?>
+<hospital>
+    <patient>
+        <name firstname="A" middlename="B" lastname="C">ABC</name>
+        <sex>Male</sex>
+        <room-number>1</room-number>
+        <age>40</age>
+        <social-security-number>1234</social-security-number>
+        <primary-insurance-company>
+            <id>11</id>
+            <group-id>21</group-id>
+            <phone>1111111111</phone>
+            <address>Chennai</address>
+        </primary-insurance-company>
+        <secondary-insurance-company>
+            <id>21</id>
+            <group-id>41</group-id>
+            <phone>2222222222</phone>
+            <address>Madurai</address>
+        </secondary-insurance-company>
+    </patient>
+    <patient>
+        <name firstname="x" middlename="Y" lastname="Z">XYZ</name>
+        <sex>Male</sex>
+        <room-number>2</room-number>
+        <age>20</age>
+        <social-security-number>1234</social-security-number>
+        <primary-insurance-company>
+            <id>12</id>
+            <group-id>31</group-id>
+            <phone>1111111111</phone>
+            <address>Mumbai</address>
+        </primary-insurance-company>
+        <secondary-insurance-company>
+            <id>22</id>
+            <group-id>51</group-id>
+            <phone>2222222222</phone>
+            <address>Delhi</address>
+        </secondary-insurance-company>
+    </patient>
+</hospital>

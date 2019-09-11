@@ -1,0 +1,54 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <meta charset="utf-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <title>Repeat Customers</title>
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+</head>
+<body>
+    <input type="button" value="Display Frequent" onclick=dispData()>
+    <br> 
+    <br>
+    <p id="demo"></p>
+
+
+    <script>
+        function dispData() {
+            var xhttp = new XMLHttpRequest();
+            xhttp.onreadystatechange = function() {
+                if(this.readyState == 4 && this.status == 200) {
+                    dispXML(this);
+                }
+            };
+            xhttp.open("GET","prog4.xml",true);
+            xhttp.send();
+        }
+
+        function dispXML(xml) {
+            var xmlDoc = xml.responseXML;
+            var x = xmlDoc.getElementsByTagName("customer");
+
+            var content = "";
+
+            for (var i = 0; i < x.length; i++) {
+                console.log(i);
+                content += "Name: " + x[i].getElementsByTagName("name")[0].childNodes[0].nodeValue + " <br>";
+                content += "Address: <br>" 
+
+                var y = x[i].getElementsByTagName("address");
+
+                for (var j = 0; j < y.length; j++) {
+                    content += "City: " + y[j].getElementsByTagName("city")[0].childNodes[0].nodeValue + " <br>";
+                    content += "State: " + y[j].getElementsByTagName("state")[0].childNodes[0].nodeValue + " <br>";
+                    content += "Pincode: " + y[j].getElementsByTagName("zip")[0].childNodes[0].nodeValue + " <br>";
+                }
+                content += "<br>"
+            }
+            document.getElementById("demo").innerHTML = content
+            
+        }
+    </script>
+
+</body>
+</html>

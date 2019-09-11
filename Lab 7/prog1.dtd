@@ -1,0 +1,17 @@
+<!ELEMENT catalog (car)>
+<!ELEMENT car (make,model,year,color,engine,number_of_doors,transmission_type,accessories)>
+<!ELEMENT make (#PCDATA)>
+<!ELEMENT model (#PCDATA)>
+<!ELEMENT year (#PCDATA)>
+<!ELEMENT color (#PCDATA)>
+<!ELEMENT engine (number_of_cylinders,fuel_system)>
+<!ELEMENT number_of_cylinders (#PCDATA)>
+<!ELEMENT fuel_system (#PCDATA)>
+<!ELEMENT number_of_doors (#PCDATA)>
+<!ELEMENT transmission_type (#PCDATA)>
+<!ELEMENT accessories (#PCDATA)>
+<!ATTLIST accessories radio (yes|no)>
+<!ATTLIST accessories air_conditioning (yes|no)>
+<!ATTLIST accessories power_windows (yes|no)>
+<!ATTLIST accessories power_steering (yes|no)>
+<!ATTLIST accessories power_brakes (yes|no)>

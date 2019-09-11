@@ -1,0 +1,31 @@
+<html>
+    <head>
+        <title>Program 5</title>
+        <meta charset="utf-8">
+        <script>
+            function myfunc(){
+                var x = document.getElementById("city").value;
+                var y = document.getElementById("state").value;
+                var z = document.getElementById("zipcode").value;
+                console.log(x);
+                var req = x + " " + y + " " + z;
+                var xml_load1 = new XMLHttpRequest();
+                xml_load1.onreadystatechange = function(){
+                    if(this.readyState == 4 && this.status == 200){
+                        alert(this.responseText);
+                    }
+                };
+                xml_load1.open("GET","prog5.php?val="+req,true);
+                xml_load1.send();
+            }
+        </script>
+    </head>
+    <body>
+        <form>
+            City:<input id="city" type="text" value="" /><br><br>
+            State:<input id="state" type="text" value="" /><br><br>
+            ZipCode:<input id="zipcode" type="text" value="" /><br><br> 
+            <input type="button" value="Submit" onclick=myfunc() />           
+        </form>
+    </body>
+</html>

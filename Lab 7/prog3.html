@@ -1,0 +1,70 @@
+<html>
+    <head>
+        <title> Program 3 </title>
+        <style>
+            #display{
+                visibility: hidden;
+            }
+        </style>
+        <script>
+                function getData(){
+                    var xml_load1 = new XMLHttpRequest();
+                    xml_load1.onreadystatechange = function(){
+                        if(this.readyState == 4 && this.status == 200){
+                            getMakeElement(this);
+                        }
+                    };
+                    xml_load1.open("GET","index.xml",true);
+                    xml_load1.send();
+                }
+                function getMakeElement(xml){
+                    var xmlDoc = xml.responseXML;
+                    var content = "";
+                    var x = xmlDoc.getElementsByTagName("make");
+                    for(i = 0;i < x.length;i++){
+                        var name = "button"+i.toString();
+                        var id1 = "value"+i.toString();
+                        content += "<br> <input type = 'text'" + "value='" + x[i].childNodes[0].nodeValue + "' id=" + id1+ " /><button id="+name+" onclick = displayUtil('"+x[i].childNodes[0].nodeValue+ "')> Click to display value </button><br>";
+                    }
+                    document.getElementById("list").innerHTML = content;
+                }
+                function displayUtil(name){
+                    document.getElementById("list").style.visibility = "hidden";
+                    document.getElementById("list").style.display = "none";
+                    console.log(name);
+                    getContentData(name)
+                    
+                }
+                function getContentData(data){
+                    var xml_load1 = new XMLHttpRequest();
+                    xml_load1.onreadystatechange = function(){
+                        if(this.readyState == 4 && this.status == 200){
+                            loadData(this,data);
+                        }
+                    };
+                    xml_load1.open("GET","index.xml",true);
+                    xml_load1.send();
+                }
+                function loadData(xml,data){
+                    var xmlDoc = xml.responseXML;
+                    var content = "<table border=1><tr><th>Color</th><th>Year</th></tr>";
+                    var x = xmlDoc.getElementsByTagName("car");
+                    for(var i = 0;i<x.length;i++){
+                        if(x[i].getElementsByTagName("make")[0].childNodes[0].nodeValue == data){
+                            content+="<tr><td>"+ x[i].getElementsByTagName("color")[0].childNodes[0].nodeValue + "</td><td>"+ x[i].getElementsByTagName("year")[0].childNodes[0].nodeValue + "</td></tr>";
+                        }
+                    }
+                    content+="</table>";
+                    document.getElementById("display").innerHTML = content;
+                    document.getElementById("display").style.visibility = "visible";
+                }
+
+            </script>
+    </head>
+    <body onload = "getData()">
+        <div id="list">
+        </div>
+        <div id = "display">
+        </div>
+    </body>
+</html>

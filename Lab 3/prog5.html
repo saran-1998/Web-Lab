@@ -1,0 +1,32 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Document</title>
+</head>
+<body onclick="fetchCoordinates()", class="body">
+    <p class = "para" >Click Me!!</p>
+</body>
+<style>
+    .body{
+        width: 100%;
+        min-height: 100%;
+        background-color: aqua;
+    }
+
+    .para {
+        height: 900px;
+        margin : 0;
+    }
+</style>
+<script>
+    function fetchCoordinates() {
+        console.log("heloo");
+        var cX = event.clientX;
+        var cY = event.clientY;
+        alert("xCoordinates: " + cX + "yCoordinates: " + cY)
+    }
+</script>
+</html>

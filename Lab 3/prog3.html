@@ -1,0 +1,29 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Document</title>
+    <!-- <link rel="stylesheet" href="prog3.css"> -->
+</head>
+<body>
+    Username:<input type="text", required, id="ip1">
+    Password:<input type="password", required, id="ip2">
+    <button type="button", onclick="check()">Submit</button>
+</body>
+<script>
+    function check()
+    {
+        var uname = document.getElementById("ip1");
+        var pass = document.getElementById("ip2");
+        var k = pass.value;
+        console.log(k);
+        if( k === "saran")
+        {
+            window.open("https://www.w3schools.com")
+            console.log("saran")
+        }
+    }
+</script>
+</html>

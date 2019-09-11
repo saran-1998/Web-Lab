@@ -1,0 +1,65 @@
+<?xml version="1.0"?>
+<!DOCTYPE catalog SYSTEM "prog4.dtd">
+<catalog>
+    <car>
+        <year>1998</year>
+        <make>Indian</make>
+        <model>BMW</model>
+        <color>Blue</color>
+        <engine>
+            <number_of_cylinders>6</number_of_cylinders>
+            <fuel_system>fuel_injected</fuel_system>
+        </engine>
+        <transmission_type>auto</transmission_type>
+        <number_of_doors>4</number_of_doors>
+        <accessories radio = "yes" air_conditioning = "no" power_windows = "yes" power_steering = "no" power_brakes = "yes"></accessories>
+    </car>
+    
+    <car>
+        <make>English</make>
+        <model>Benz</model>
+        <year>1912</year>
+        <color>Black</color>
+        <engine>
+            <number_of_cylinders>8</number_of_cylinders>
+            <fuel_system>carburated</fuel_system>
+        </engine>
+        <number_of_doors>2</number_of_doors>
+        <transmission_type>manual</transmission_type>
+        <accessories radio = "yes" air_conditioning = "no" power_windows = "yes" power_steering = "no" power_brakes = "yes"></accessories>
+    </car>
+
+    <car>
+        <make>German</make>
+        <model>Volkswagon</model>
+        <year>1957</year>
+        <color>Red</color>
+        <engine>
+            <number_of_cylinders>4</number_of_cylinders>
+            <fuel_system>carburated</fuel_system>
+        </engine>
+        <number_of_doors>6</number_of_doors>
+        <transmission_type>auto</transmission_type>
+        <accessories radio = "yes" air_conditioning = "no" power_windows = "yes" power_steering = "no" power_brakes = "yes"></accessories>
+    </car>
+
+    <customer>
+        <id>1</id>
+        <name>Saran</name>
+        <address>
+            <city>Chennai</city>
+            <state>TN</state>
+            <zip>600073</zip>
+        </address>
+    </customer>
+
+    <customer>
+        <id>2</id>
+        <name>Saran</name>
+        <address>
+            <city>Chennai</city>
+            <state>MN</state>
+            <zip>600073</zip>
+        </address>
+    </customer>
+</catalog>

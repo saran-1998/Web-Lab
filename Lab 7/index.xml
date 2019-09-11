@@ -1,0 +1,43 @@
+<catalog>
+        <car>
+            <make>Indian</make>
+            <model>BMW</model>
+            <color>Blue</color>
+            <year>1992</year>
+            <engine>
+                <number_of_cylinders>6</number_of_cylinders>
+                <fuel_system>fuel injected</fuel_system>
+            </engine>
+            <number_of_doors>4</number_of_doors>
+            <transmission_type>automatic</transmission_type>
+            <accessories radio = "yes" air_conditioning = "no" power_windows = "yes" power_steering = "no" power_brakes = "yes"></accessories>
+        </car>
+        
+        <car>
+            <make>English</make>
+            <model>Benz</model>
+            <color>Black</color>
+            <year>1985</year>
+            <engine>
+                <number_of_cylinders>8</number_of_cylinders>
+                <fuel_system>carburated</fuel_system>
+            </engine>
+            <number_of_doors>2</number_of_doors>
+            <transmission_type>manual</transmission_type>
+            <accessories radio = "yes" air_conditioning = "no" power_windows = "yes" power_steering = "no" power_brakes = "yes"></accessories>
+        </car>
+    
+        <car>
+            <make>German</make>
+            <model>Volkswagon</model>
+            <color>Red</color>
+            <year>1999</year>
+            <engine>
+                <number_of_cylinders>4</number_of_cylinders>
+                <fuel_system>carburated</fuel_system>
+            </engine>
+            <number_of_doors>6</number_of_doors>
+            <transmission_type>auto</transmission_type>
+            <accessories radio = "yes" air_conditioning = "no" power_windows = "yes" power_steering = "no" power_brakes = "yes"></accessories>
+        </car>
+    </catalog>
